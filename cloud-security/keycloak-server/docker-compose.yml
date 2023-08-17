@@ -27,6 +27,7 @@ services:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin 
       KC_HOSTNAME: localhost
+      KC_FEATURES: 'declarative-user-profile'
     ports:
       - 8080:8080
     depends_on:

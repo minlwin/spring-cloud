@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: Service-Registry-Server
+
+server:
+  port: 8761
+  
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url: http://${eureka.instance.hostname}:${server.port}/eureka/
+    register-with-eureka: false
+    fetch-registry: false

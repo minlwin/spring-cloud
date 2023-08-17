@@ -26,3 +26,5 @@ hs_err_pid*
 .project
 .mvn/
 .settings/
+
+**/target
