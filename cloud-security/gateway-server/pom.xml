@@ -6,10 +6,12 @@
 		<groupId>com.jdc.cloud</groupId>
 		<artifactId>cloud-security</artifactId>
 		<version>1.0</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<artifactId>gateway-server</artifactId>
 	
 	<dependencies>
+				
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-gateway</artifactId>

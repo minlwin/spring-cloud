@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: account-api
+
+server:
+  port: 8091
+  servlet:
+    context-path: /api/account
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
