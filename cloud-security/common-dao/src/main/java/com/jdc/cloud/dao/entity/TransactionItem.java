@@ -11,7 +11,7 @@ import lombok.Data;
 @Data
 @Entity
 @SequenceGenerator(name = "seq_transaction_details", allocationSize = 1)
-public class TransactionDetails {
+public class TransactionItem {
 
 	@Id
 	@GeneratedValue(generator = "seq_transaction_details")
@@ -28,4 +28,5 @@ public class TransactionDetails {
 	
 	@Column(nullable = false, name = "unit_price")
 	private int unitPrice;
+	
 }

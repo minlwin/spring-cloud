@@ -27,6 +27,14 @@
 			<artifactId>spring-webflux</artifactId>
 		</dependency>					
 		<dependency>
+			<groupId>com.jdc.cloud</groupId>
+			<artifactId>common-dao</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.jdc.cloud</groupId>
+			<artifactId>common-model</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>

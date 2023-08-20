@@ -5,15 +5,15 @@ import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-
 @Configuration
-public class ServiceGatewayConfig {
+public class ServiceGatewayRouteConfig {
 
 	@Bean
-	RouteLocator gatewayRoute(RouteLocatorBuilder builder) {
+	RouteLocator routeLocator(RouteLocatorBuilder builder) {
 		return builder.routes()
-				.route("locations", r -> 
-					r.path("/locations/**").uri("lb://locations")).build();
+				.route(route -> route
+						.path("/locations/**")
+						.uri("lb://locations"))
+				.build();
 	}
-	
 }

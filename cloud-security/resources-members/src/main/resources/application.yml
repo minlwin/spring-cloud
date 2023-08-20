@@ -1,7 +1,7 @@
 spring:
   application:
     name: member-api
-
+         
 server:
   port: 8093
   servlet:
@@ -11,3 +11,4 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+      
