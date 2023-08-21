@@ -11,12 +11,12 @@ public class RouteConfigurations {
 	@Bean
 	RouteLocator gatewayRoute(RouteLocatorBuilder builder) {
 		return builder.routes()
-			.route("api/v0/accounts", r -> 
-				r.path("/api/account/**").uri("lb://account-api"))
-			.route("api/v1/balaces", r -> 
-				r.path("/api/balance/**").uri("lb://balance-api"))
-			.route("api/v2/members", r -> 
-				r.path("/api/member/**").uri("lb://member-api"))
+			.route("account-api", r -> 
+				r.path("/account-api/**").uri("lb://account-api"))
+			.route("balance-api", r -> 
+				r.path("/balance-api/**").uri("lb://balance-api"))
+			.route("member-api", r -> 
+				r.path("/member-api/**").uri("lb://member-api"))
 			.build();
 	}
 	
