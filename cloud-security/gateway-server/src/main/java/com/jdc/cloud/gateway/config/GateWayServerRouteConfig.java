@@ -1,4 +1,4 @@
-package com.jdc.cloud.gateway;
+package com.jdc.cloud.gateway.config;
 
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class RouteConfigurations {
+public class GateWayServerRouteConfig {
 
 	@Bean
 	RouteLocator gatewayRoute(RouteLocatorBuilder builder) {

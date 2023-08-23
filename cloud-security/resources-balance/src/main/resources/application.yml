@@ -1,6 +1,13 @@
 spring:
   application:
     name: balance-api
+  security:
+    oauth2:
+      resourceserver:
+        opaquetoken:
+          introspection-uri: http://localhost:8080/realms/spring-cloud-security/protocol/openid-connect/token/introspect
+          client-id: api-application
+          client-secret: NGpfseraiidpQVgLpANxNVnejgf4nWfm
 
 server:
   port: 8092

@@ -1,6 +1,13 @@
 spring:
   application:
     name: gateway
+  security:
+    oauth2:
+      resourceserver:
+        opaquetoken:
+          introspection-uri: http://localhost:8080/realms/spring-cloud-security/protocol/openid-connect/token/introspect
+          client-id: api-application
+          client-secret: NGpfseraiidpQVgLpANxNVnejgf4nWfm
 
 server:
   port: 9000
@@ -9,3 +16,4 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+      
