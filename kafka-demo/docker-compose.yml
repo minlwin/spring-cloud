@@ -1,0 +1,62 @@
+version: '3'
+
+services:
+  zookeeper:
+    image: zookeeper
+    container_name: kafka-demo-zookeeper
+    ports:
+      - "2181:2181"
+    networks:
+      - kafkanet
+    volumes:
+      - zookeeper-data:/data
+      - zookeeper-datalog:/datalog
+      - zookeeper-logs:/logs
+            
+  kafka:
+    image: wurstmeister/kafka
+    container_name: kafka-demo-kafka
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_ZOOKEEPER_CONNECT: kafka-demo-zookeeper:2181
+      KAFKA_ADVERTISED_HOST_NAME: localhost
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+    volumes:
+      - kafka-data:/kafka
+    links:
+      - zookeeper:zookeeper
+    networks:
+      - kafkanet
+    depends_on:
+      - zookeeper
+
+  service-registry:
+    build: ./kafka-demo-service-registry
+    container_name: kafka-demo-eureka
+    ports:
+      - "8761:8761"
+    networks:
+      - kafkanet
+    depends_on:
+      - kafka
+  
+  gateway:
+    build: ./kafka-demo-gateway
+    container_name: kafka-demo-gateway
+    ports:
+      - "8080:8080"
+    networks:
+      - kafkanet
+    depends_on:
+      - service-registry
+           
+volumes:
+  kafka-data:
+  zookeeper-data:
+  zookeeper-datalog:
+  zookeeper-logs:
+  
+networks:
+  kafkanet:
+  
