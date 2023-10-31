@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "a1ae8b79-389c-43b4-9c47-03a682c1c0f1",
+		"name": "polimophic-io",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2989298",
+		"_collection_link": "https://lively-satellite-430517.postman.co/workspace/Testing~7b7313f7-6138-4fb0-95f2-538c22ee84ea/collection/2989298-a1ae8b79-389c-43b4-9c47-03a682c1c0f1?action=share&source=collection_link&creator=2989298"
+	},
+	"item": [
+		{
+			"name": "create-fix",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"typeInfo\" : \"FIX\",\n    \"type\" : \"FIX\",\n    \"description\" : \"Test Setting for Fix Data\",\n    \"amount\" : \"100\",\n    \"percent\" : \"10\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/settings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"settings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-teir",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"typeInfo\" : \"TEIR\",\n    \"type\" : \"TEIR\",\n    \"description\" : \"Test Setting for Fix Data\",\n    \"items\" : [\n        {\n            \"name\" : \"Teir 1\",\n            \"from\" : \"0\",\n            \"to\" : \"100\"\n        },\n        {\n            \"name\" : \"Teir 2\",\n            \"from\" : \"101\",\n            \"to\" : \"1000\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/settings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"settings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/settings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"settings"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
