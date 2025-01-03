@@ -230,5 +230,21 @@ kubectl apply -f kubernetes/api-deployment.yml
 #### Create Service for Spring Boots Application
 
 ```
+apiVersion: v1
+kind: Service
+metadata:
+  name: region-api
+spec:
+  selector:
+    app: region-api
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+```
 
+Create Service for Spring Boots Application
+```
+kubectl apply -f kubernetes/api-service.yml
 ```
