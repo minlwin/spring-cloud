@@ -1,0 +1,15 @@
+insert into region (name, burmese, capital) values ('Ayeyarwady Region', 'ဧရာဝတီတိုင်းဒေသကြီး', 'Pathein');
+insert into region (name, burmese, capital) values ('Bago Region', 'ပဲခူးတိုင်းဒေသကြီး', 'Bago');
+insert into region (name, burmese, capital) values ('Chin State', 'ချင်းပြည်နယ်', 'Hakha');
+insert into region (name, burmese, capital) values ('Kachin State', 'ကချင်ပြည်နယ်', 'Myitkyina');
+insert into region (name, burmese, capital) values ('Kayah State', 'ကယားပြည်နယ်', 'Loikaw');
+insert into region (name, burmese, capital) values ('Kayin State', 'ကရင်ပြည်နယ်', 'Hpa-an');
+insert into region (name, burmese, capital) values ('Magway Region', 'မကွေးတိုင်းဒေသကြီး', 'Magwe');
+insert into region (name, burmese, capital) values ('Mandalay Region', 'မန္တလေးတိုင်းဒေသကြီး', 'Mandalay');
+insert into region (name, burmese, capital) values ('Mon State', 'မွန်ပြည်နယ်', 'Mawlamyine');
+insert into region (name, burmese, capital) values ('Naypyidaw Union Territory', 'နေပြည်တော် ပြည်ထောင်စုနယ်မြေ', 'Naypyidaw');
+insert into region (name, burmese, capital) values ('Rakhine State', 'ရခိုင်ပြည်နယ်', 'Sittwe');
+insert into region (name, burmese, capital) values ('Sagaing Region', 'စစ်ကိုင်းတိုင်းဒေသကြီး', 'Monywa');
+insert into region (name, burmese, capital) values ('Shan State', 'ရှမ်းပြည်နယ်', 'Taunggyi');
+insert into region (name, burmese, capital) values ('Tanintharyi Region', 'တနင်္သာရီတိုင်းဒေသကြီး', 'Dawei');
+insert into region (name, burmese, capital) values ('Yangon Region', 'ရန်ကုန်တိုင်းဒေသကြီး', 'Yangon');

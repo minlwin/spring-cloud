@@ -1,10 +1,7 @@
 FROM amazoncorretto:21-alpine-jdk
 
 RUN apk update && apk add --no-cache tzdata
-
 RUN addgroup -S spring && adduser -S spring -G spring
-
-RUN mkdir -p /var/log/application && chmod -R 777 /var/log/application
 
 ENV TZ=Asia/Yangon
 

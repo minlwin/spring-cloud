@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  region-api
+  labels:
+    app:  region-api
+spec:
+  selector:
+    matchLabels:
+      app: region-api
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app:  region-api
+    spec:
+      containers:
+      - name:  region-api
+        image:  localhost:5001/jdc/regions-api
+        resources:
+          requests:
+            cpu: 250m
+            memory: 128Mi
+          limits:
+            cpu: 500m
+            memory: 256Mi
+        env:
+        - name: HOST_NAME
+          value: postgres
+        - name: POSTGRES_DB
+          valueFrom:
+            configMapKeyRef:
+              name: postgres-config
+              key: POSTGRES_DB
+        - name: POSTGRES_USER
+          valueFrom:
+            configMapKeyRef:
+              name: postgres-config
+              key: POSTGRES_USER
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: postgres-secret
+              key: POSTGRES_PASSWORD
+        ports:
+        - containerPort:  8080
